@@ -1,0 +1,499 @@
+/*
+Theme Name: WPtricks Starter
+Theme URI: http://wptricks.co.uk
+Description: My WordPress template that was built with HTML 5 and is fully responsive. 
+			CSS3: 
+				This theme uses box-sizing, max-width on main container and percentage widths for sidebar and articles.
+				The navigaiton uses border-box + flex to add space between with full width.
+			Included JS: 
+						POP-UPS by http://dimsemenov.com/plugins/magnific-popup/, 
+						TOOLTIPS by http://iamceege.github.io/tooltipster/,
+						MODERNIZR a custom modernizr script by http://modernizr.com/
+			Fonts: 
+					Open Sans - regular, italic, semi bold, semi bold italic.
+					FontAwesome - icon fonts
+					
+Version: 1.1
+Author: Aaron Summers
+Author URI: http://wptricks.co.uk
+Tags: minimalist, template, html5, tooltips, lighbox, responsive, theme customizer
+
+	WPtricks Starter v1.0
+	http://wptricks.co.uk
+
+	This theme was lovingly designed and developed by Aaron Summers, 
+	who blogs at WPtricks.co.uk, develops and designs at uk2.net.
+	- You can find me on twitter @ukwptricks
+
+	This theme and all this stuff is released under GPL:
+	http://www.opensource.org/licenses/gpl-3.0.html
+*/
+
+/*
+
+	1. CSS Reset
+	2. Essential Styles
+	3. Basic Layout
+	4. Navigation
+	5. Links
+	6. Font Styles + H-tags
+	7. CSS Animation
+	8. Single Post Navigation With Thumbnails
+	9. Contact Page
+	10. Theme Customizer Styles
+
+
+*/
+
+
+@import url(fonts/fonts.css);
+
+/*
+ * 1. CSS Reset
+ * http://meyerweb.com/eric/tools/css/reset/
+****************************************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+html {
+	font-family: ralewayregular;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+ * 2. Essential Styles
+ **************************************************/
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+*:before, *:after {
+	content: "";
+}
+
+header:after, section:after, aside:after, footer:after, ul:after, .clearfix.after {
+	display: table;
+}
+
+header:after, section:after, aside:after, footer:after, ul:after, .clearfix.after {
+	clear: both;
+}
+
+html {
+	background: #f5f5f5;
+}
+
+body, textarea, input {
+	background: #f5f5f5;
+	color: #4a4a4a;
+	font-size: 16px;
+	font-size: 1em;
+	font-family: open_sansregular;
+	line-height: 1.7em;
+}
+body {
+	overflow-x: hidden;
+}
+
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+.main-body {
+	padding: 80px 0;
+}
+/*
+ *   WordPress Defaults - LISTS
+ **************************************************/
+
+article ol, article ul {
+	margin: 10px 20px;
+	padding-left: 38px;
+}
+article ol {
+	list-style: decimal-leading-zero;
+}
+article ol li ol {
+	list-style: lower-roman;
+}
+article ol li ol li ol {
+	list-style: lower-alpha;
+}
+article ul {
+	list-style: disc;
+}
+article ul li ul {
+	list-style: circle;
+}
+article ul li ul {
+	list-style: square;
+}
+footer ul {
+	list-syle: none;
+	margin: 8px 0;
+	padding: 3px 5px;
+}
+/*
+ *  WordPress Defaults - IMAGE ALIGNMENT
+ **************************************************/
+
+.alignright {
+	float: right;
+	display: inline-block;
+	margin-left: 20px;
+}
+.alignleft {
+	float: left;
+	display: inline-block;
+	margin-right: 20px;
+}
+.aligncenter {
+	display: block;
+	margin: 0 auto;
+}
+/*
+ * 3. Basic Layout
+ **************************************************/
+body > section {
+	width: 100%;
+}
+.wrapper > .left-content {
+	max-width: 70%;
+	margin-right: 2%;
+	float: left;
+	padding: 20px;
+}
+body > section .wrapper aside {
+	max-width: 28%;
+	float: right;
+	padding: 20px;
+}
+body > footer {
+	clear: both;
+	padding: 20px;
+	margin-top: 30px;
+	background: #464646;
+	color: #fff;
+}
+body > footer ul {
+	display: block;
+	width: 100%;
+	max-width: 23.333%;
+	padding: 20px;
+	float: left;
+}
+body > footer ul:first-child {
+	max-width: 30%
+}
+body > footer .footer + p {
+	text-align: center;
+	font-size: .8em;
+	margin-bottom: 0;
+}
+footer .addthis_toolbox li {
+	list-style: none;
+}
+/*
+ * 4. Navigation - http://css-tricks.com/flexbox-bar-navigation/
+ **************************************************/
+.main-header nav .menu * {
+	box-sizing: border-box;
+}
+.main-header nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+}
+.main-header nav li a {
+	display: flex;
+	align-items: flex-start;
+	padding: 1em 1.2em;
+	font-size: 1.1em;
+}
+
+/*
+ * 5. Links
+ **************************************************/
+a {
+	color: #ff3b12;
+	text-decoration: none;
+}
+a:hover,
+a:active {
+	color: #CC2B0A;
+	text-decoration: underline;
+}
+
+/*
+ * 6. Font Styles + H-tags
+ **************************************************/
+p, input, textarea {
+	margin: 10px 0 20px;
+	font-family: "open_sansregular";
+}
+i, em, blockquote {
+	font-family: "open_sansitalic";
+}
+b, strong {
+	font-family: "open_sanssemibold";
+}
+h1, h2, h3, h4, h5 {
+	font-family: "open_sanssemibold";
+	padding: 12px 0;
+}
+h3 {
+	padding: 9px 0;
+}
+h4, h5 {
+	padding: 6px 0;
+}
+h1 em, h2 em, h3 em, h4 em, h5 em,
+h1 i, h2 i, h3 i, h4 i, h5 i,
+b i, strong i, b em, strong em  {
+	font-family: "open_sanssemibold_italic";
+}
+h1 {
+	font-size: 2.4em;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1.7em;
+}
+h4 {
+	font-size: 1.5em;
+}
+h5 {
+	font-size: 1.2em;
+}
+small {
+	font-size: .75em;
+}
+.main-header h1 {
+	padding: 20px 0 0;
+}
+.main-header h2 {
+	padding: 3px 0 0;
+	font-size: 1.5em;
+}
+#logo h1,
+#logo h2 {
+	text-indent: -9999px;
+}
+
+/*
+ * 7. Sidebars
+ **************************************************/
+aside > ul li {
+    margin-bottom: 40px;
+}
+/*
+ * 7. Footer
+ **************************************************/
+.lower-footer {
+	text-align: center;
+}
+footer .footer ul:nth-of-type(1) {
+	width: 34%
+}
+footer .footer ul {
+	width: 22%;
+}
+footer .footer ul li ul {
+	padding: 0;
+}
+footer .lower-footer {
+	clear: both;
+}
+footer .social-media-icons {
+	margin: 0;
+	padding: 0;
+}
+/*
+ * 7. CSS Animation
+ **************************************************/
+a {
+	-webkit-transition: all .2s ease .4s;
+    -moz-transition: all .2s ease .4s;
+    -o-transition: all .2s ease .4s;
+    transition: all .2s ease .4s;
+}
+/*
+ * 8. Single Post Navigation With Thumbnails
+ **************************************************/
+.single-post-nav {
+	width: 100%;
+	margin-top: 60px;
+	border-top: 3px solid #333;
+	background: #fff;
+}
+.single-post-nav a {
+	text-decoration: none;
+}
+.single-post-nav > div {
+	width: 50%;
+	float: left;
+	padding: 30px 50px;
+	text-align: right;
+}
+.single-post-nav > div:first-child {
+	border-right: 3px solid #333;
+	text-align: left;
+}
+.single-post-nav > div h4 {
+	margin: 0;
+}
+.single-post-nav > div:nth-of-type(1) img {
+	float: left;
+	margin-right: 16px;
+}
+.single-post-nav > div:nth-of-type(2) img {
+	float: right;
+	margin-left: 16px;
+}
+
+/*
+ * 9. Contact Page
+ **************************************************/
+  .error{
+  padding: 5px 9px;
+  border: 1px solid red;
+  color: red;
+  border-radius: 3px;
+}
+ 
+.success{
+  padding: 5px 9px;
+  border: 1px solid green;
+  color: green;
+  border-radius: 3px;
+}
+form[method=post] {
+    padding-top: 50px;
+}
+form span{
+  color: red;
+}
+.left {
+    float: left;
+    width: 35%;
+}
+.right {
+    float: right;
+    width: 65%;
+}
+.left input {
+    width: 80% !important;
+}
+.right textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+textarea, input {
+	border: 1px solid #fff;
+	box-shadow: inset 0 0 7px 4px #ddd;
+}
+input[type=submit] {
+	cursor: pointer;
+	padding: 7px 14px;
+}
+/*
+ * 10. Theme Customizer Styles
+ **************************************************/
+body.sidebar-left aside > section .wrapper aside {
+    padding: 0 20px 0 0 !important;
+    float: left !important;
+}
+body.sidebar-left .wrapper > .left-content {
+    padding: 0 0 0 20px !important;
+    float: right !important;
+	margin-left: 2%;
+	margin-right: 0;
+}
+body.sidebar-right aside > section .wrapper  aside {
+    padding: 0 0 0 20px !important;
+    float: right !important;
+}
+body.sidebar-right .wrapper > .left-content {
+    padding: 0 0 0 20px !important;
+    float: left !important;
+	margin-right: 2%;
+	margin-left: 0;
+}
+.sidebar-none aside {
+    display: none !important;
+}
+.sidebar-none .wrapper > .left-content {
+    width: 100% !important;
+	max-width: 100% !important;
+}
+
+ul.social-media-icons {
+    float: right;
+}
+.social-media-icons li {
+    float: left;
+    font-size: 18px;
+    margin: 0 2px;
+}
+.social-media-icons li a {
+    padding: 0 5px;
+    color: #aaa;
+}
+
+#logo a {
+	float: left;
+	margin-right: 30px;
+}
+
+/*
+ * 11. Colours and temp styles
+ **************************************************/
+
+.main-header header {
+	background: #ff3b12;
+}
+.main-header nav {
+	background: #ddd;
+}

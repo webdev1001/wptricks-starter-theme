@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* OPTIONS.CSS */
+
+/* THEME CUSTOMIZER - ALT LAYOUT STYLES */
+ 
+
+body.sidebar-left aside > section .wrapper aside {
+    padding: 0 20px 0 0 !important;
+    float: left !important;
+}
+body.sidebar-left .wrapper > .left-content {
+    padding: 0 0 0 20px !important;
+    float: right !important;
+	margin-left: 2%;
+	margin-right: 0;
+}
+body.sidebar-right aside > section .wrapper  aside {
+    padding: 0 0 0 20px !important;
+    float: right !important;
+}
+body.sidebar-right .wrapper > .left-content {
+    padding: 0 0 0 20px !important;
+    float: left !important;
+	margin-right: 2%;
+	margin-left: 0;
+}
+.sidebar-none aside {
+    display: none !important;
+}
+.sidebar-none .wrapper > .left-content {
+    width: 100% !important;
+	max-width: 100% !important;
+}
+
+ul.social-media-icons {
+    float: right;
+}
+.social-media-icons li {
+    float: left;
+    font-size: 18px;
+    margin: 0 2px;
+}
+.social-media-icons li a {
+    padding: 0 5px;
+    color: #aaa;
+}
+
+.logo-image a {
+	float: left;
+}
