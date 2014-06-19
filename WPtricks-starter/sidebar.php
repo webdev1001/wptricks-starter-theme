@@ -7,6 +7,11 @@
 					<em>WPtricks Starter is a theme template built with HTML 5.</em>
                     <p>This theme has a few of my usual theme additions included to make my life just that little bit easier. Check <strong>WPtricks-starter/javascript/</strong> folder for included scripts.</p>
 				</li>
+				<li>
+					<h2>Theme Options</h2>
+					<em>WPtricks Starter uses the wp theme customizer</em>
+                    <p><a href="wp-admin/customize.php">Click here to be taken to the theme customizer.</a></p>
+				</li>
                 <li>
                 	<h2>Lightbox by magnific-popup</h2>
                     <a href="http://dimsemenov.com/plugins/magnific-popup/" target="new"><em>http://dimsemenov.com/plugins/magnific-popup/</em></a> 
