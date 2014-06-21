@@ -94,7 +94,7 @@
                     ?>
                     
                     <hgroup id="logo">
-                        <a href='http://localhost/wordpress/' title='WPtricks Testing' rel='home'><img src='<?php bloginfo('template_directory'); ?>/images/logo.png' alt='WPtricks Testing'></a>
+                        <a href='http://wptricks.o.uk' title='WPtricks' rel='home' target="new"><img src='<?php bloginfo('template_directory'); ?>/images/logo.png' alt='WPtricks Testing'></a>
                             <h1><?php bloginfo('name'); ?></h1>
                             <h2><small><?php bloginfo('description'); ?></small></h2>
                     </hgroup> <!-- /#logo -->
