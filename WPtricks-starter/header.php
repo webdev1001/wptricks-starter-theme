@@ -68,7 +68,6 @@
 			body a:hover { color:  <?php echo $content_link_hover_color; ?>; } <!--anchor tag :hover colours-->
 			body > header hgroup, #wp-calendar a, a.button { background-color:  <?php echo $highlight_color; ?>; }
 			.article > footer, input, textarea, .single article > footer, input[type="submit"] { border-color: <?php echo $highlight_color; ?>;  }
-			.slider-date, .article > footer, .single article > footer { color: <?php echo $highlight_color; ?>;  }
 			#wp-calendar a, a.button { color:  <?php echo $content_link_hover_color; ?>; }
 			h1, h2, h3, h4, h5, h6 { color:  <?php echo $h1_title_color; ?>; }
 		</style>
