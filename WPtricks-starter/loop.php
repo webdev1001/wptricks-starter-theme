@@ -71,7 +71,7 @@ if ( is_page() || is_single() && !is_attachment() ) {
 				<?php get_sidebar(); ?>
 				
 			</div> <!-- /.wrapper -->
-		</section>
+		</section> <!-- /.main-body -->
 <?php } // END - DISPLAY PAGE AND POST CONTENT ON SINGLE POST & SINGLE PAGES ?>
   
   
@@ -152,7 +152,7 @@ if ( is_page() || is_single() && !is_attachment() ) {
 				</div> <!-- /.left-content -->
 				<?php get_sidebar(); ?>
 			</div><!-- /.wrapper -->
-		</section>
+		</section> <!-- /.main-body -->
 <?php } // END - DISPLAY POSTS ON HOME, ARCHIVE AND SEARCH PAGES ?>
 
 <?php 
@@ -228,6 +228,6 @@ if ( is_page() || is_single() && !is_attachment() ) {
 				<?php get_sidebar(); ?>
 				
 			</div> <!-- /.wrapper -->
-		</section>
+		</section> <!-- /.main-body -->
 		
 <?php } // END - SINGLE ATTATCHMENT/IMAGE PAGE ?>

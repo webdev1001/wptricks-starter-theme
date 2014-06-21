@@ -20,7 +20,7 @@
             <p><?php $content = get_the_content(); echo wp_trim_words( $content , '28' ); ?></p>
             
              <a class="previous" href="<?php the_permalink(); ?>"><i class="fa fa-arrow-left"></i> Previous Article</a>
-        </div>
+        </div> <!-- /.post-previous-->
     <?php
                 wp_reset_postdata();
             } //end foreach
@@ -42,8 +42,8 @@
             <p><?php $content = get_the_content(); echo wp_trim_words( $content , '28' ); ?></p>
             
             <a class="previous" href="<?php the_permalink(); ?>">Next Article <i class="fa fa-arrow-right"></i></a>
-        </div>
-    </nav>
+        </div> <!-- /.post-next -->
+    </nav> <!-- /.single-post-nav -->
     <?php
                 wp_reset_postdata();
             } //end foreach

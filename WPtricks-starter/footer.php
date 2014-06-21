@@ -1,4 +1,4 @@
-		<footer>
+		<footer class="main-footer">
             <div class="wrapper">
                 <div class="footer clearfix">
                     <ul><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-one')) : endif; ?></ul>
@@ -16,7 +16,7 @@
 						<?php my_social_media_icons(); ?>
                 </footer>
 			</div> <!-- /.wrapper -->
-		</footer>
+		</footer> <!-- /.main-footer -->
 		<?php wp_footer(); ?>
 
 	<!-- JAVASCRIPT -->

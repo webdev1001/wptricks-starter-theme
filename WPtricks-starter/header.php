@@ -87,7 +87,7 @@
                         <a href='<?php bloginfo('url'); ?>/' title='<?php bloginfo('name'); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'header_logo' ) ); ?>' alt='<?php bloginfo('name'); ?>'></a>
                             <h1><?php bloginfo('name'); ?></h1>
                             <h2><small><?php bloginfo('description'); ?></small></h2>
-                    </hgroup>
+                    </hgroup> <!-- /#logo -->
                     
                     <?php else : 
                         // Otherwise use the default header.
@@ -97,7 +97,7 @@
                         <a href='http://localhost/wordpress/' title='WPtricks Testing' rel='home'><img src='<?php bloginfo('template_directory'); ?>/images/logo.png' alt='WPtricks Testing'></a>
                             <h1><?php bloginfo('name'); ?></h1>
                             <h2><small><?php bloginfo('description'); ?></small></h2>
-                    </hgroup>
+                    </hgroup> <!-- /#logo -->
                         
                         <?php endif; ?>
                 </div><!-- /.wrapper -->
@@ -107,4 +107,4 @@
                     <?php wp_nav_menu( array( 'theme_location' => 'header-menu' )); ?>
                 </div><!-- /.wrapper -->
             </nav>
-        </section>
+        </section> <!-- /.main-header -->
